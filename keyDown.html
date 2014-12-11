@@ -1,0 +1,14 @@
+<html>
+<script language="JavaScript" type="text/javascript">
+	function checkKey(e) {
+		document.writeln("you entered the character " + String.fromCharCode(e.keyCode) +".");
+	}
+</script>
+<body>
+
+	<form name="theForm">
+		<input type=text name='theText' onKeyDown="checkKey(event);">
+	</form>
+	
+</body>
+</html>
