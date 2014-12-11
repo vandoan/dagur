@@ -1,0 +1,28 @@
+<html>
+<head>
+<script language="javascript">
+	function addunderline() {
+		head1.style.textDecoration = "underline"
+	}
+	function removeunderline() {
+		head1.style.textDecoration = "none"
+	}
+
+	function addoverline() {
+		head1.style.textDecoration = "overline"
+	}
+
+	function addlinethrough() {
+		head1.style.textDecoration = "line-through"
+	}
+</script>
+</head>
+<body>
+	<h1 id='head1' style="padding:50px;"
+		onmouseover="addunderline()"
+		onmouseout="removeunderline()"
+		onclick="addoverline()"
+		ondblclick="addlinethrough()">Welcome to theis page!</h1>
+		<p>A lot of interesting text goes here!</p>
+</body>
+</html>
