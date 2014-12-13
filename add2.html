@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<body>
+<form name="myForm">
+	<select id="list" size="8">
+		<option>ice cream</option>
+		<option>cheese</option>
+		<option>milk</option>
+	</select>
+</form>
+<button id="bear" onclick="bear()">add pie</button>
+<script>
+	
+	function bear() {
+		var list = document.getElementById("list");
+
+		var pig = document.createElement("option");
+		pig.text = "dog";
+		list.add(pig);
+	}
+
+</script>
+</body>
+</html>
