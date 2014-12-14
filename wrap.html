@@ -1,0 +1,26 @@
+<html>
+<body>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("div").contents().filter("em").wrap("<b/>");
+			});
+		});
+
+	</script>
+</head>
+<body>
+
+	<div><em>Pig love mud</em></div>
+
+	<p>No pigs in this tag</p>
+
+	<br>
+	
+	<button>Find all text nodes in div and wrap them wiht b tags</button>
+
+</body>
+</html>

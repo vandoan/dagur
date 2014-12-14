@@ -1,0 +1,14 @@
+<html>
+<body>
+	<script>
+		function checkKey(e) {
+			document.writeln("You clicked " + String.fromCharCode(e.keyCode) + ".");
+		}
+	</script>
+
+	<form name="theForm">
+		<input type=text name="theText" onKeyDown="checkKey(event);">
+	</form>
+
+</body>
+</html>
