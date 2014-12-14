@@ -1,0 +1,48 @@
+<html>
+
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+
+<style>
+
+	#press, #menu { 
+		top: 50px;left:50px; 
+		background-color:black;
+		color:teal; width:70px;
+		text-align:center;
+		padding:15px;
+		border-radius:5px;
+		position: absolute;
+		display: inline-block;
+	}
+	#menu {
+		left:300px;
+		top: -50px;
+	}
+</style>
+
+<script>
+	$(document).ready(function(){
+		$("#press").click(function(){
+			$("#menu").css({"top":"0"});
+		});
+	})
+	
+	// make sure to include () with parents and to use curly brackets with css values
+</script>
+
+
+<body>
+
+<div id="menu">
+ 	mud
+</div>
+
+<div id="press">
+	Press Me
+</div>
+</body>
+</html>
