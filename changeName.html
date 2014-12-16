@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+<select name="pig" id="pig">
+	<option>Apple</option>
+	<option>Pear</option>
+	<option>Banana</option>
+	<option>Orange</option>
+</select>
+</form>
+
+<button onclick="display()">Display name</button>
+<br />
+<button onclick="change()">Change name</button>
+
+<script>
+	function display() {
+		var x = document.getElementById("pig").name;
+		alert("The name of the dropdown list is: " + x);
+	}
+	function change() {
+		var x = document.getElementById("pig").name = "mud";
+		alert ("The name was changed to: " + x);
+	}
+	</script>
+
+</body>
+</html>
