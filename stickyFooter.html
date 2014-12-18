@@ -1,0 +1,59 @@
+<html>
+
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	 <style type="text/css" style="display: none !important;">
+	/* Mostly: http://ryanfait.com/sticky-footer/ */
+
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+	margin-bottom: -142px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+	height: 142px; 
+}
+.site-footer {
+  background: orange;
+}</style>
+
+	<script>
+	$(document).ready(function(){
+
+$("#add").on("click", function() {
+  $("<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>").appendTo(".page-wrap");
+});
+})
+	</script>
+</head>
+
+<body>
+<div class="page-wrap">
+  
+  <h1>Sticky Footer</h1>
+  <h2>with Fixed Footer Height</h2>
+  
+  <button id="add">Add Content</button>  
+     
+</div>
+
+<footer class="site-footer">
+  I'm the Sticky Footer.
+</footer>
+
+</body>
+
+
+</html>
