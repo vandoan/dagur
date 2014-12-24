@@ -1,0 +1,35 @@
+<html>
+<!-- http://jsfiddle.net/JdbhV/6/ -->
+
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<style>
+  #pig { font-size: 0; }
+  #pig img { width: 33.3%; opacity: 0; 
+  }
+</style>
+
+<script>
+$(function() {
+$('#pig img').each(function(i) {
+$(this).delay((i++) * 500).fadeTo(1000, 1); })
+});
+</script>
+
+<body>
+
+<div id="pig">
+
+<img src="img/dahlias.jpg" alt="dahlia">
+<img src="img/galdious.jpg" alt="gladious">
+<img src="img/blackEyeSusans.jpg" alt="blackEyeSusans">
+<img src="img/iris.jpg" alt="iris">
+<img src="img/astilbe.jpg" alt="astilbe">
+<img src="img/crocuses.jpg" alt="crocuses">
+
+</div>
+
+</body>
+
+</html>
