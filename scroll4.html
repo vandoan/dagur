@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<title>MDN Example</title>
+ 
+<script>
+
+  var appended = false, 
+      bookmark = document.createElement("div");
+      bookmark.id = "arrowUp";
+      bookmark.innerHTML = "<a href='#' title='Top of page'>&uarr;<\/a>";
+  
+  onscroll = function() {
+    var scrollTop = $(window).scrollTop() + $(window).height();
+// when the scroll passes 500 before the end, triggers...
+    if (scrollTop > $(document).height() - 500) {
+      if (!appended) {
+        document.body.appendChild(bookmark);
+        appended = true;
+      }
+    } else {
+      if (appended) {
+        document.body.removeChild(bookmark);
+        appended = false;
+      }
+    }
+      console.log(scrollTop);
+      console.log($(document).height());
+  };
+
+</script>
+
+ <style>
+  p { height: 200px; width: 50px; background-color:teal; margin: 50px; }
+</style>
+<style type="text/css">
+#arrowUp {
+  position: fixed;
+  height: auto;
+  width: auto;
+  right: 10px;
+  top: 10px;
+  font-size: 48px;
+}
+#arrowUp a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: serif;
+}
+</style>
+</head>
+
+<body>
+<body>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+</body></body>
+
+</html>
