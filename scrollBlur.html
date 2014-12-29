@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+<script>
+
+window.onscroll = function (event) {
+  var headerImg = document.querySelector("article header img");
+    var headerImgOffset = headerImg.getBoundingClientRect();
+    var imgTop = headerImgOffset.top;
+    var imgBottom = headerImgOffset.bottom;
+    var imgHeight = headerImg.offsetHeight;
+    var viewportHeight = document.documentElement.clientHeight;
+    var blur = document.getElementById("blur");
+    var svgblur = blur.getElementsByTagName("feGaussianBlur")[0];
+    
+    var topEffectStart = Math.abs((viewportHeight - imgHeight)/5);
+        if (imgTop < topEffectStart && imgBottom > 0 ) { 
+            blurFactor = Math.abs(imgTop / 100);
+            headerImg.style.webkitFilter = "blur(" + blurFactor + "px)";
+            svgblur.setAttribute("stdDeviation", blurFactor);
+            headerImg.style.webkitTransform="scale("+(1+Math.abs(imgTop / 1000))+")";
+            headerImg.style.transform="scale("+(1+Math.abs(imgTop / 1000))+")";
+            }
+}
+
+
+</script>
+
+<style>
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+body { 
+  margin: 2rem; 
+}
+article { 
+  margin: 0 auto;
+  width: 60%;
+}
+header { 
+    overflow: hidden;
+    font-size: 0; 
+    }
+h1 { 
+  font-family: Effra, sans-serif;
+  text-transform: uppercase; 
+  font-size: 5vw;
+  text-align: center;
+  position: relative;
+  top: -8rem;
+  color: #fff;
+}
+article header img { 
+  width: 100%;
+  height: auto; 
+  filter: url(#blur);
+}
+p { 
+  margin-top: -8rem; 
+  text-align: justify;     
+  font-family: Raleway, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<article>
+  <header>
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/placid-pond.jpg" alt>
+  </header>
+  <h1>On Walden Pond</h1>
+<p>AT A CERTAIN season of our life we are accustomed to consider every spot as the possible site of a house. I have thus surveyed the country on every side within a dozen miles of where I live. In imagination I have bought all the farms in succession, for all were to be bought, and I knew their price. I walked over each farmer's premises, tasted his wild apples, discoursed on husbandry with him, took his farm at his price, at any price, mortgaging it to him in my mind; even put a higher price on it — took everything but a deed of it — took his word for his deed, for I dearly love to talk — cultivated it, and him too to some extent, I trust, and withdrew when I had enjoyed it long enough, leaving him to carry it on. This experience entitled me to be regarded as a sort of real-estate broker by my friends. Wherever I sat, there I might live, and the landscape radiated from me accordingly. What is a house but a sedes, a seat? — better if a country seat. I discovered many a site for a house not likely to be soon improved, which some might have thought too far from the village, but to my eyes the village was too far from it. Well, there I might live, I said; and there I did live, for an hour, a summer and a winter life; saw how I could let the years run off, buffet the winter through, and see the spring come in. The future inhabitants of this region, wherever they may place their houses, may be sure that they have been anticipated. An afternoon sufficed to lay out the land into orchard, wood-lot, and pasture, and to decide what fine oaks or pines should be left to stand before the door, and whence each blasted tree could be seen to the best advantage; and then I let it lie, fallow, perchance, for a man is rich in proportion to the number of things which he can afford to let alone.
+</article>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <filter id="blur">
+    <feGaussianBlur stdDeviation="0" />
+  </filter>
+</svg>
+
+
+</body>
+
+</html>
