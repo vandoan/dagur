@@ -24,6 +24,11 @@ image from - http://www.free-world-maps.com/*/
 	100% { background-position: 400px 0}
 }
 
+@-webkit-keyframes season {
+  0% { background-position: 0 0}
+	100% { background-position: 400px 0}
+}
+
 html {  min-height: 100% }
 
 body { text-align: center; background: linear-gradient(45deg,#222,#000); line-height: 600px}
@@ -37,7 +42,10 @@ div {
 	height: 200px;
 	display: inline-block;
 	transform: rotate(-23.5deg);
+	/* Chrome, Safari, Opera */
+	-webkit-transfrom: rotate(7deg);
 	animation: season 20s infinite linear;
+	-webkit-animation: season 20s infinite linear;
 }
 </style>
 </head>
